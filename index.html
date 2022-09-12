@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+
+    <!-- fontawesome kit -->
+
+    <script
+      src="https://kit.fontawesome.com/4d63ed8f35.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- styles -->
+
+    <link rel="icon" type="image/png" href="./assets/rocket.svg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <main class="main__container">
+        
+        <div class="mainCard">
+          <div class="title"><img src="./assets/logo-todo-list.png" /></div>
+          <div class="main__card-add-task" >
+            <form action="">
+              <input
+                type="text"
+                name="task"
+                placeholder="Add a new task"
+                class="inputForm"
+                autocomplete="off"
+                data-form-input
+              />
+              <button type="submit" class="btnCreate" data-form-btn>
+                Add Task
+              </button>
+            </form>
+          </div>
+          <div class="task__list" data-task-list>
+            <div class="task__list-content">
+              <div class="task__left">
+                <h1 class="task-number" data-task-number>0</h1>
+                  <span class="task-number__text">Task left</span>
+              </div>
+              <div class="task__completed">
+                <h1 class="task-number__text--completed" data-task-completed>0</h1>
+                <span class="task-number__text" data-delete-all>Clear completed</span>
+              </div>
+            </div>
+          </div>
+          <ul class="cardsList" data-list></ul>
+        </div>
+      </main>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
