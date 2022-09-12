@@ -132,7 +132,7 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   margin: 8px 0px;
   border: 1px solid rgb(216, 207, 219);
   border-radius: 5px;
@@ -260,8 +260,6 @@ form {
   transform: scale(1.14);
   transition: all 0.4s ease-in-out;
 }
-
-
 
 .fa-trash:hover {
   background-clip: text;
