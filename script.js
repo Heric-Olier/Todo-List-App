@@ -19,7 +19,7 @@ const createTask = (event) => {
     <span class="date"> ${dayName}${','} ${day} ${monthName}${','} ${year}</span>
       </div>
     </div>
-    <i class="fas fa-trash-alt trashIcon icon"></i>`;
+    <i class="fas fa-doutone fa-trash trashIcon icon"></i>`;
     task.innerHTML += content;
     list.appendChild(task);
 

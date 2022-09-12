@@ -1,6 +1,4 @@
 * {
-  margin: 0;
-  padding: 0;
   font-family: poppins, sans-serif;
   font-size: 16px;
 }
@@ -230,7 +228,7 @@ form {
   font-size: 22px;
   transition: all 0.3s;
   text-decoration: none;
-  color: rgb(63, 59, 68);
+  color: rgb(82, 73, 92);
 }
 
 .completeIcon {
@@ -251,7 +249,6 @@ form {
 
 .fa-solid {
   border: none;
-  border-radius: 100%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -262,6 +259,19 @@ form {
   );
   transform: scale(1.14);
   transition: all 0.4s ease-in-out;
+}
+
+
+
+.fa-trash:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    rgba(229, 87, 149, 1) 11.2%,
+    rgba(84, 100, 188, 1) 100.2%
+  );
+  transform: scale(1.12);
 }
 
 .card-active {
