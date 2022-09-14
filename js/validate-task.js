@@ -7,14 +7,14 @@ const checkTask = (id) => {
 };
 
 // validamos el numero de tareas
-const validateTask = () => {
+const validateTask = (id) => {
   const task = document.querySelectorAll(".card");
   const taskNumber = document.querySelector("[data-task-number]");
   taskNumber.innerHTML = task.length;
 };
 
 // validamos el numero de tareas completadas
-const validateCompletedTask = () => {
+const validateCompletedTask = (id) => {
   const task = document.querySelectorAll(".card-active");
   const taskNumber = document.querySelector("[data-task-completed]");
   taskNumber.innerHTML = task.length;

@@ -1,4 +1,4 @@
-import { validateCompletedTask } from "./validate-task.js";
+import { validateCompletedTask, validateTask } from "./validate-task.js";
 import { checkTask } from "./validate-task.js";
 
 
@@ -19,6 +19,7 @@ const completeTask = (event, id) => {
     element.parentElement.parentElement.classList.remove("card-active");
   }
   checkTask();
+  validateTask(id);
   validateCompletedTask();
 
 };
