@@ -1,7 +1,8 @@
 // creamos el icono de check
-const checkTask = () => {
+const checkTask = (id) => {
   const i = document.createElement("i");
   i.classList.add("fa-regular", "fa-circle-check", "icon");
+  i.setAttribute("data-complete", id);
   return i;
 };
 
