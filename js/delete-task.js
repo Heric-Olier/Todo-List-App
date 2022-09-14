@@ -1,11 +1,15 @@
 import { validateTask, validateCompletedTask } from "./validate-task.js";
 
 // borramos las tareas
-const deleteTask = (event) => {
-  const task = event.target.parentElement;
-  task.classList.add("delete-animation");
-  task.addEventListener("transitionend", () => {
-    task.remove();
+const deleteTask = (event, id) => {
+  const element = event.target;
+  const task = JSON.parse(localStorage.getItem("task")) || [];
+  const taskCompletedIndex = task.findIndex((item) => item.id === id);
+  task.splice(taskCompletedIndex, 1);
+  localStorage.setItem("task", JSON.stringify(task));
+  element.parentElement.classList.add("delete-animation");
+  element.parentElement.addEventListener("transitionend", () => {
+    element.parentElement.remove();
     validateTask();
     validateCompletedTask();
   });

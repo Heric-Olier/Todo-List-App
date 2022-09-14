@@ -38,7 +38,7 @@ export const createTask = (event) => {
     list.appendChild(task);
 
     const trashIcon = task.querySelector(".trashIcon");
-    trashIcon.addEventListener("click", deleteTask);
+    trashIcon.addEventListener("click", (event) => deleteTask(event, id));
 
     const checkIcon = task.querySelector(".fa-regular");
     checkIcon.addEventListener("click", (event) => completeTask(event, id));
