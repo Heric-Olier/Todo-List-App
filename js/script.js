@@ -43,6 +43,12 @@ export const createTask = (event) => {
     const trashIcon = task.querySelector(".trashIcon");
     trashIcon.addEventListener("click", deleteTask);
 
+    const checkIcon = task.querySelector(".fa-regular");
+    checkIcon.addEventListener("click", (event) => completeTask(event, id));
+    validateTask();
+    validateCompletedTask();
+    
+
     const complete = false;
     const taskObject = {
       id,
@@ -57,8 +63,6 @@ export const createTask = (event) => {
     taskList.push(taskObject);
     localStorage.setItem("task", JSON.stringify(taskList));
 
-    validateTask();
-    validateCompletedTask();
   }
 };
 btnCreate.addEventListener("click", createTask);
@@ -82,10 +86,6 @@ const showTask = () => {
     <i class="fas fa-doutone fa-trash trashIcon icon"></i>`;
     taskElement.innerHTML += content;
     list.appendChild(taskElement);
-
-    // borramos la tarea individualmente del local storage
-      
-    
 
 
 
