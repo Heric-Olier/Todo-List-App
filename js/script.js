@@ -1,6 +1,6 @@
 import completeTask from "./complete-task.js";
 import {validateTask, checkTask, validateCompletedTask,} from "./validate-task.js";
-import { deleteTask } from "./delete-task.js";
+import { deleteTask, deleteAllTask } from "./delete-task.js";
 import { showTask } from "./show-task-local-storage.js";
 
 const btnCreate = document.querySelector("[data-form-btn]");
@@ -42,6 +42,9 @@ export const createTask = (event) => {
 
     const checkIcon = task.querySelector(".fa-regular");
     checkIcon.addEventListener("click", (event) => completeTask(event, id));
+    
+    const btnDeleteAll = document.querySelector("[data-delete-all]");
+    btnDeleteAll.addEventListener("click", deleteAllTask);
     
     const complete = false;
     const taskObject = {

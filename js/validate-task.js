@@ -7,7 +7,7 @@ const checkTask = (id) => {
 };
 
 // validamos el numero de tareas
-const validateTask = (id) => {
+const validateTask = () => {
   const task = document.querySelectorAll(".card");
   const taskNumber = document.querySelector("[data-task-number]");
   taskNumber.innerHTML = task.length;

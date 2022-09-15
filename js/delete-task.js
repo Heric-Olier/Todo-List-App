@@ -17,21 +17,22 @@ const deleteTask = (event, id) => {
 
 // borramos todas las tareas completadas
 const deleteAllTask = () => {
-  const task = document.querySelectorAll(".card-active");
-  task.forEach((element) => {
-    element.classList.add("delete-animation");
-    element.addEventListener("transitionend", () => {
-      element.remove();
+  const task = JSON.parse(localStorage.getItem("task")) || [];
+  const taskCompleted = task.filter((item) => item.complete === true);
+  taskCompleted.forEach((item) => {
+    const taskCompletedIndex = task.findIndex((item) => item.complete === true);
+    task.splice(taskCompletedIndex, 1);
+    localStorage.setItem("task", JSON.stringify(task));
+  });
+  const list = document.querySelectorAll(".card-active");
+  list.forEach((item) => {
+    item.classList.add("delete-animation");
+    item.addEventListener("transitionend", () => {
+      item.remove();
       validateTask();
       validateCompletedTask();
     });
   });
 };
-
-const btnDeleteAll = document.querySelector("[data-delete-all]");
-const taskCompletedNumber = document.querySelector(
-  "task-number__text--completed"
-);
-btnDeleteAll.addEventListener("click", deleteAllTask);
 
 export { deleteTask, deleteAllTask };
