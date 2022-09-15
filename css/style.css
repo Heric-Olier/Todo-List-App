@@ -3,22 +3,39 @@
   font-size: 16px;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 22vh;
+  padding: 70px 0;
+  background-color: #784ba0;
+  background-image: linear-gradient(0deg, #8e46cc 43%, #50198f 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 main {
-  background-image: linear-gradient(
-    109.6deg,
-    rgb(190, 179, 233) 11.2%,
-    rgb(164, 80, 233) 100.2%
-  );
+  background-color: #fff;
   width: 100vw;
   height: 100vh;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .main__container {
   width: 100%;
+  height: 78vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
 }
 
 form {
@@ -26,27 +43,26 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 }
 
 .mainCard {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   max-width: 660px;
-  margin: 0 30px;
-  height: 86vh;
-  border-radius: 10px;
+  /* margin: 0 30px; */
+  height: 100%;
+  /* border-radius: 10px; */
   background-color: #fff;
   overflow: hidden;
-  padding: 26px;
-  box-shadow: 0 0 14px rgba(26, 8, 44, 0.281);
+  /* box-shadow: 0 0 14px rgb(26 8 44 / 28%);*/
 }
 
 .main__card-add-task {
-  width: 100%;
+  width: 98%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,13 +74,28 @@ form {
   display: flex;
   justify-content: center;
   align-content: center;
-  border-bottom: 2px solid rgb(164, 80, 233);
-  margin: 30px 0;
 }
 
 .title img {
   width: 11rem;
   margin-bottom: 40px;
+}
+
+.container__task-counter {
+  width: 98%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 25px; */
+  /* margin: 0 16px; */
+  background-color: #fff;
+  box-shadow: rgb(17 17 26 / 10%) -1px 3px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
+  border-radius: 10px;
+  padding: 0 20px;
+  position: relative;
+  top: -30px;
+  max-width: 660px;
 }
 
 .inputForm {
@@ -126,16 +157,17 @@ form {
 }
 
 .card {
-  width: 100%;
-  padding: 13px;
-  box-shadow: 3px 2px 3px 3px rgb(57 49 62 / 8%);
+  width: 98%;
+  padding: 20px;
+  /* box-shadow: 3px 2px 3px 3px rgb(57 49 62 / 8%); */
+  box-shadow: rgb(17 17 26 / 10%) -1px 3px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 8px 0px;
-  border: 1px solid rgb(216, 207, 219);
-  border-radius: 5px;
+  /* border: 1px solid rgb(216, 207, 219); */
+  border-radius: 10px;
   position: relative;
   transition: all 0.4s cubic-bezier(0.65, 0.8, 0.25, 1);
   animation: translate 0.35s cubic-bezier(0.25, 0.8, 0.25, 1.55);
@@ -167,7 +199,6 @@ form {
   flex-direction: column;
   align-items: flex-start;
   margin: 0 12px;
-
 }
 
 .date {
@@ -179,7 +210,7 @@ form {
 
 .task__list {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding-bottom: 16px;
@@ -193,14 +224,9 @@ form {
 }
 
 .task-number,
-.task-number__text--completed {
-  margin: 0 4px;
-}
-
-.task-number,
 .task-number__text--completed,
 .task-number__text {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: rgba(90, 62, 110, 0.548);
   transition: all 0.3s ease-in-out;
@@ -221,6 +247,14 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.task-number,
+.task-number__text--completed {
+  margin: 4px;
+  font-size: 22px;
+  color: rgb(82, 73, 92);
 }
 
 .icon {

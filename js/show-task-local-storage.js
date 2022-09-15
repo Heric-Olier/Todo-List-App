@@ -41,6 +41,7 @@ const showTask = () => {
       checkIcon.classList.remove("fa-regular");
       checkIcon.classList.add("fa-solid");
       taskElement.classList.add("card-active");
+      
     } else {
       checkIcon.classList.remove("fa-solid");
       checkIcon.classList.add("fa-regular");
