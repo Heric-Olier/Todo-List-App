@@ -22,7 +22,7 @@ const showTask = () => {
     }${","} ${task.year}</span>
       </div>
       </div>
-      <i class="fas fa-doutone fa-trash trashIcon icon"></i>`;
+      <i class="fa-solid fa-xmark trashIcon icon"></i>`;
     taskElement.innerHTML += content;
     list.appendChild(taskElement);
 

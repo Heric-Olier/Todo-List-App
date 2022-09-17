@@ -5,13 +5,12 @@
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 22vh;
-  padding: 70px 0;
-  background-color: #784ba0;
+  padding: 90px 0;
   background-image: linear-gradient(0deg, #8e46cc 43%, #50198f 100%);
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,8 +76,7 @@ form {
 }
 
 .title img {
-  width: 11rem;
-  margin-bottom: 40px;
+  width: 10rem;
 }
 
 .container__task-counter {
@@ -92,43 +90,50 @@ form {
   background-color: #fff;
   box-shadow: rgb(17 17 26 / 10%) -1px 3px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
   border-radius: 10px;
-  padding: 0 20px;
+  padding: 20px;
   position: relative;
-  top: -30px;
-  max-width: 660px;
+  top: -36px;
+  max-width: 648px;
 }
 
 .inputForm {
   border: none;
   padding: 10px;
-  border: 1px solid rgb(216, 207, 219);
-  background-color: rgb(235, 219, 248);
-  border-radius: 5px;
+  box-shadow: rgb(17 17 26 / 10%) -1px 3px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
+  height: 46px;
+  background-color: #50198f27;
+  border: 1px solid #8d46cc13;
+  border-radius: 7px;
   outline: none;
-  width: 65%;
+  color: #50198f;
+  width: 90%;
   font-size: 0.9rem;
   font-weight: 500;
   margin-right: 10px;
 }
 
 .inputForm::placeholder {
-  color: #1307168f;
+  color: #50198f;
   padding: 0px;
 }
 
 .btnCreate {
-  width: 126px;
-  height: 43px;
-  background-image: linear-gradient(
-    160deg,
-    rgba(229, 87, 149, 1) 11.2%,
-    rgba(84, 100, 188, 1) 100.2%
-  );
+  width: 46px;
+  height: 46px;
+  background-image: linear-gradient(160deg, #8e46cc 43%, #50198f 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border: none;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 7px;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btnCreate:hover {
+opacity: 0.8;
 }
 
 .cardsList {
@@ -288,8 +293,8 @@ form {
   -webkit-text-fill-color: transparent;
 
   background-image: linear-gradient(
-    rgba(229, 87, 149, 1) 11.2%,
-    rgba(84, 100, 188, 1) 100.2%
+    #bc46cc 11.2%,
+    #50198f 100.2%
   );
   transform: scale(1.14);
   transition: all 0.4s ease-in-out;
@@ -306,8 +311,20 @@ form {
   transform: scale(1.12);
 }
 
+.fa-xmark {
+  background-image: none;
+  background-color: rgb(82, 73, 92);
+}
+
+.fa-check {
+  background-image: none;
+  background-color: #fff;
+  font-size: 1.1rem;
+}
+
+
 .card-active {
-  background-color: rgb(235, 219, 248);
+  background-color: #50198f27
 }
 
 .card-active .task {

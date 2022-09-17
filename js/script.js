@@ -33,7 +33,7 @@ export const createTask = (event) => {
     <span class="date"> ${dayName}${","} ${day} ${monthName}${","} ${year}</span>
     </div>
     </div>
-    <i class="fas fa-doutone fa-trash trashIcon icon" data-delete></i>`;
+    <i class="fa-solid fa-xmark trashIcon icon" data-delete></i>`;
     task.innerHTML += content;
     list.appendChild(task);
 
