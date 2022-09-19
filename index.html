@@ -41,9 +41,66 @@
   <body>
     <main>
       <header>
+        <div class="nav__menu">
+          <h1>Select Theme</h1>
+          <hr />
+          <div class="theme__btn-container">
+            <span
+              class="theme-btn"
+              data-color="113, 20, 167"
+              style="background-color: rgb(113, 20, 167)"
+            ></span>
+            <span
+              class="theme-btn"
+              data-color="37, 78, 212"
+              style="background-color: rgb(37, 78, 212)"
+            ></span>
+            <span
+              class="theme-btn"
+              data-color="250, 67, 53"
+              style="background-color: rgb(250, 67, 53)"
+            ></span>
+            <span
+              class="theme-btn"
+              data-color="255, 187, 0"
+              style="background-color: rgb(255, 187, 0)"
+            ></span>
+            <span
+              class="theme-btn"
+              data-color="41, 212, 64"
+              style="background-color: rgb(41, 212, 64)"
+            ></span>
+            <span
+              class="theme-btn"
+              data-color="0, 133, 60"
+              style="background-color: rgb(0, 133, 60)"
+            ></span>
+            <span
+              class="theme-btn"
+              data-color="0, 204, 204"
+              style="background-color: rgb(0, 204, 204)"
+            ></span>
+            <span
+              class="theme-btn"
+              data-color="241, 64, 241"
+              style="background-color: rgb(241, 64, 241)"
+            ></span>
+            <span
+              class="theme-btn"
+              data-color="37, 193, 255"
+              style="background-color: rgb(37, 193, 255)"
+            ></span>
+          </div>
+        </div>
         <div class="title">
+          <i class="fa-solid fa-moon"></i>
           <img src="./assets/images/logo-todo-list.png" />
-          <i class="fa-solid fa-palette"></i>
+          <!---- Burguer Menu ---->
+          <div class="nav__burguer">
+            <span class="nav__burguer-line-1"></span>
+            <span class="nav__burguer-line-2"></span>
+            <span class="nav__burguer-line-3"></span>
+          </div>
         </div>
       </header>
       <main class="main__container">
@@ -51,16 +108,20 @@
           <div class="task__list-content">
             <div class="task__left">
               <h1 class="task-number" data-task-number>0</h1>
-                <span class="task-number__text">Total Tasks</span>
+              <span class="task-number__text">Total Tasks</span>
             </div>
             <div class="task__completed">
-              <h1 class="task-number__text--completed" data-task-completed>0</h1>
-              <span class="task-number__text" data-delete-all>Task completed</span>
+              <h1 class="task-number__text--completed" data-task-completed>
+                0
+              </h1>
+              <span class="task-number__text" data-delete-all
+                >Task completed</span
+              >
             </div>
           </div>
         </div>
         <div class="mainCard">
-          <div class="main__card-add-task" >
+          <div class="main__card-add-task">
             <form action="">
               <input
                 type="text"
@@ -75,13 +136,12 @@
               </button>
             </form>
           </div>
-          <div class="task__list" data-task-list>
-           
-          </div>
+          <div class="task__list" data-task-list></div>
           <ul class="cardsList" data-list></ul>
         </div>
       </main>
     </main>
     <script type="module" src="js/script.js"></script>
+    <script src="js/change-color.js"></script>
   </body>
 </html>

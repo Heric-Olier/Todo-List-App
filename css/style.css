@@ -78,12 +78,96 @@ form {
   font-family: "Dosis", sans-serif;
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   max-width: 650px;
 }
 
 .title img {
-  width: 10rem;
+  width: 8rem;
+}
+
+.nav__menu {
+  width: 236px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--white-color);
+  border-radius: 0 8px 8px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: rgb(17 17 26 / 10%) -1px 3px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
+}
+
+.nav__menu.active {
+  transform: translateX(0);
+}
+
+.nav__menu h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  padding-top: 12px;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+.theme__btn-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+  padding: 0 24px;
+  align-content: center;
+  justify-items: center;
+}
+
+.theme-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: rgb(17 17 26 / 10%) -1px 3px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-btn:hover {
+  transform: scale(1.2);
+}
+
+.nav__burguer {
+  width: 25px;
+  cursor: pointer;
+}
+
+.nav__burguer span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--white-color);
+  margin: 5px 0;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.nav__burguer-line-1.active {
+  transform: translatey(8px) rotate(135deg);
+}
+
+.nav__burguer-line-2.active {
+  transform: translate(0) rotate(135deg);
+}
+
+.nav__burguer-line-3.active {
+  transform: translatey(-8px) rotate(-135deg);
 }
 
 .container__task-counter {
@@ -118,7 +202,7 @@ form {
 }
 
 .inputForm::placeholder {
-  color: rgb(var(--main-color), 0.6);
+  color: rgb(var(--main-color), 0.7);
   padding: 0px;
 }
 
@@ -333,10 +417,12 @@ form {
   font-size: 1.1rem;
 }
 
-.fa-circle-check:hover {
+.fa-moon {
   background-image: none;
-  background-color: rgb(var(--main-color), 0.15);
-  border-radius: 50%;
+  font-size: 1.3rem;
+  background-color: var(--white-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .card-active {
