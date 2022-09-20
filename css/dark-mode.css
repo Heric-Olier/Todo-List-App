@@ -37,3 +37,7 @@ body.dark .date,
 body.dark .task-number__text {
   color: var(--dark-color-grey);
 }
+
+body.dark .card-active {
+  background-color: rgb(var(--main-color), 0.1);
+}
