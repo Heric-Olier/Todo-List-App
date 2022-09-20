@@ -36,6 +36,7 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dark-mode.css" />
   </head>
 
   <body>
@@ -62,8 +63,8 @@
             ></span>
             <span
               class="theme-btn"
-              data-color="236, 173, 0"
-              style="background-color: rgb(236, 173, 0)"
+              data-color="254, 155, 10"
+              style="background-color: rgb(254, 155, 10)"
             ></span>
             <span
               class="theme-btn"
@@ -93,7 +94,10 @@
           </div>
         </div>
         <div class="title">
-          <i class="fa-solid fa-moon"></i>
+          <div class="mode-container">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
+          </div>
           <img src="./assets/images/logo-todo-list.png" />
           <!---- Burguer Menu ---->
           <div class="nav__burguer">
@@ -143,5 +147,6 @@
     </main>
     <script type="module" src="js/script.js"></script>
     <script src="js/change-color.js"></script>
+    <script src="js/dark-mode.js"></script>
   </body>
 </html>

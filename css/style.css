@@ -215,7 +215,7 @@ hr {
   height: 46px;
   background-image: linear-gradient(
     0deg,
-    rgba(var(--main-color), 0.7),
+    rgba(var(--main-color), 0.6),
     rgba(var(--main-color), 1)
   );
   border: none;
@@ -266,7 +266,7 @@ hr {
   margin: 8px 0px;
   border-radius: 10px;
   position: relative;
-  transition: all 0.4s cubic-bezier(0.65, 0.8, 0.25, 1);
+  transition: all 0.35s cubic-bezier(0.65, 0.8, 0.25, 1);
   animation: translate 0.35s cubic-bezier(0.25, 0.8, 0.25, 1.55);
 }
 
@@ -417,13 +417,41 @@ hr {
   font-size: 1.1rem;
 }
 
-.fa-moon {
+.mode-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.fa-moon,
+.fa-sun {
   background-image: none;
-  font-size: 1.3rem;
+  font-size: 1.36rem;
   background-color: var(--white-color);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+
+.fa-moon {
+  display: block;
+}
+
+.fa-moon.active {
+  display: none;
+}
+
+.fa-sun {
+  display: none;
+}
+
+.fa-sun.active {
+  display: block;
+}
+
+
+
 
 .card-active {
   background-color: rgb(var(--main-color), 0.15);

@@ -1,0 +1,39 @@
+:root {
+  --dark-color: #171a25;
+  --dark-semi-color: #222738;
+  --dark-color-grey: #9c9c9c;
+  --white-color: #fff;
+}
+
+body.dark main,
+body.dark .mainCard {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  transition: all 0.4s ease;
+}
+
+body.dark .container__task-counter,
+body.dark .card,
+body.dark .nav__menu {
+  background-color: var(--dark-semi-color);
+  color: var(--white-color);
+  transition: all 0.4s ease;
+}
+
+body.dark .fa-solid {
+  background-color: var(--white-color);
+  border-radius: 100%;
+}
+
+body.dark .task-number,
+body.dark .task-number__text--completed,
+body.dark .nav__menu h1,
+body.dark .inputForm,
+body.dark .icon {
+  color: var(--white-color);
+}
+
+body.dark .date,
+body.dark .task-number__text {
+  color: var(--dark-color-grey);
+}
