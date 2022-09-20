@@ -18,7 +18,7 @@ header {
   padding: 90px 18px;
   background-image: linear-gradient(
     0deg,
-    rgba(var(--main-color), 0.7),
+    rgba(var(--main-color), 0.6),
     rgba(var(--main-color), 1)
   );
   background-size: cover;
@@ -202,12 +202,12 @@ hr {
 }
 
 .inputForm::placeholder {
-  color: rgb(var(--main-color), 0.7);
+  color: rgb(var(--main-color), 0.85);
   padding: 0px;
 }
 
 .inputForm:focus {
-  border: 2px solid #8d46cc;
+  border: 2px solid rgb(var(--main-color), 0.7);
 }
 
 .btnCreate {
