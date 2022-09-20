@@ -8,7 +8,7 @@
   font-size: 16px;
 }
 
-header {
+.header {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -24,6 +24,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
 }
 
 main {
@@ -71,6 +72,14 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+}
+
+.alert__text {
+  color: rgba(var(--main-color), 1);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
 }
 
 .title {
@@ -239,7 +248,7 @@ hr {
   overflow-y: scroll;
   overflow: auto;
   overflow-x: hidden;
-  height: 74%;
+  height: 80%;
 }
 
 .cardsList::-webkit-scrollbar {
@@ -247,18 +256,17 @@ hr {
 }
 
 .cardsList::-webkit-scrollbar-track {
-  background: rgb(190, 179, 233);
+  background-color: rgba(var(--main-color), 0.15);
 }
 
 .cardsList::-webkit-scrollbar-thumb {
   border-radius: 14px;
-  background: rgb(164, 80, 233);
+  background-color: rgba(var(--main-color), 0.5);
 }
 
 .card {
   width: 98%;
   padding: 20px;
-  box-shadow: rgb(17 17 26 / 10%) -1px 3px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -268,6 +276,7 @@ hr {
   position: relative;
   transition: all 0.35s cubic-bezier(0.65, 0.8, 0.25, 1);
   animation: translate 0.35s cubic-bezier(0.25, 0.8, 0.25, 1.55);
+  box-shadow: rgb(17 17 26 / 10%) -1px 3px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
 }
 
 @keyframes translate {
@@ -393,18 +402,6 @@ hr {
   transition: all 0.4s ease-in-out;
 }
 
-.fa-palette {
-  background-image: none;
-  background-color: var(--white-color);
-  font-size: 1.4rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-/* .fa-palette:hover {
-  background-color: rgba(var(--main-color), 0.4);
-} */
-
 .fa-xmark {
   background-color: rgba;
   background-image: none;
@@ -450,15 +447,33 @@ hr {
   display: block;
 }
 
-
-
-
 .card-active {
   background-color: rgb(var(--main-color), 0.15);
 }
 
 .card-active .task {
   text-decoration: line-through;
+}
+
+.mainCard__bottom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--white-color);
+  box-shadow: rgb(17 17 26 / 10%) -1px 3px 16px 4px, rgb(17 17 26 / 5%) 0px 8px 32px;
+}
+
+.bottom__container-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 690px;
+  padding: 0 20px;
 }
 
 .deleteConfirmationPop {
@@ -469,6 +484,23 @@ hr {
   top: -100px;
   left: 0;
 }
+
+.btn__detelete-selected {
+  background-color: rgba(var(--main-color), 1);
+  color: var(--white-color);
+  padding: 12px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgb(17 17 26 / 10%) -1px 3px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
+}
+
+.btn__detelete-selected:hover {
+  background-color: rgba(var(--main-color), 0.8);
+}
+
 .deleteSpace {
   position: relative;
   width: 30%;

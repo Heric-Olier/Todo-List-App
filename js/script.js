@@ -2,6 +2,7 @@ import completeTask from "./complete-task.js";
 import {validateTask, checkTask, validateCompletedTask,} from "./validate-task.js";
 import { deleteTask, deleteAllTask } from "./delete-task.js";
 import { showTask } from "./show-task-local-storage.js";
+import { alert } from "./alerts.js";
 
 const btnCreate = document.querySelector("[data-form-btn]");
 
@@ -22,7 +23,7 @@ export const createTask = (event) => {
   const task = document.createElement("li");
   const id = Date.now();
   if (value === "") {
-    alert("Debes ingresar una tarea");
+    alert();
   } else {
     task.classList.add("card");
     formInput.value = "";

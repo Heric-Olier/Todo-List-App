@@ -6,7 +6,8 @@
 }
 
 body.dark main,
-body.dark .mainCard {
+body.dark .mainCard, 
+body.dark .mainCard__bottom-container {
   background-color: var(--dark-color);
   color: var(--white-color);
   transition: all 0.4s ease;

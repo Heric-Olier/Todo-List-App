@@ -41,7 +41,7 @@
 
   <body>
     <main>
-      <header>
+      <header class="header">
         <div class="nav__menu">
           <h1>Select Theme</h1>
           <hr />
@@ -107,7 +107,7 @@
           </div>
         </div>
       </header>
-      <main class="main__container">
+      <section class="main__container">
         <div class="container__task-counter">
           <div class="task__list-content">
             <div class="task__left">
@@ -118,7 +118,7 @@
               <h1 class="task-number__text--completed" data-task-completed>
                 0
               </h1>
-              <span class="task-number__text" data-delete-all
+              <span class="task-number__text" 
                 >Task completed</span
               >
             </div>
@@ -142,8 +142,13 @@
           </div>
           <div class="task__list" data-task-list></div>
           <ul class="cardsList" data-list></ul>
+          <div class="mainCard__bottom-container">
+            <div class="bottom__container-content">
+              <span class="btn__detelete-selected" data-delete-all>Delete Selected</span>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
     </main>
     <script type="module" src="js/script.js"></script>
     <script src="js/change-color.js"></script>
