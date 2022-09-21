@@ -35,7 +35,6 @@ const showTask = () => {
     const btnDeleteAll = document.querySelector("[data-delete-all]");
     btnDeleteAll.addEventListener("click", deleteAllTask);
 
-  
 
     if (task.complete) {
       checkIcon.classList.remove("fa-regular");
@@ -47,6 +46,8 @@ const showTask = () => {
       checkIcon.classList.add("fa-regular");
       taskElement.classList.remove("card-active");
     }
+
+    
     validateTask();
     validateCompletedTask();
 

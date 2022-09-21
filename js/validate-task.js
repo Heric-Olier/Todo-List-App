@@ -13,11 +13,19 @@ const validateTask = () => {
   taskNumber.innerHTML = task.length;
 };
 
+const btnDeleteAll = document.querySelector("[data-delete-all]");
+
 // validamos el numero de tareas completadas
 const validateCompletedTask = (id) => {
   const task = document.querySelectorAll(".card-active");
   const taskNumber = document.querySelector("[data-task-completed]");
   taskNumber.innerHTML = task.length;
+
+  if (task.length > 0) {
+    btnDeleteAll.classList.add("active");
+  } else {
+    btnDeleteAll.classList.remove("active");
+  }
 };
 
 export { validateTask, validateCompletedTask, checkTask };

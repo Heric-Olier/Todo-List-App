@@ -1,5 +1,9 @@
 import completeTask from "./complete-task.js";
-import {validateTask, checkTask, validateCompletedTask,} from "./validate-task.js";
+import {
+  validateTask,
+  checkTask,
+  validateCompletedTask,
+} from "./validate-task.js";
 import { deleteTask, deleteAllTask } from "./delete-task.js";
 import { showTask } from "./show-task-local-storage.js";
 import { alert } from "./alerts.js";
@@ -43,10 +47,10 @@ export const createTask = (event) => {
 
     const checkIcon = task.querySelector(".fa-regular");
     checkIcon.addEventListener("click", (event) => completeTask(event, id));
-    
+
     const btnDeleteAll = document.querySelector("[data-delete-all]");
     btnDeleteAll.addEventListener("click", deleteAllTask);
-    
+
     const complete = false;
     const taskObject = {
       id,
@@ -57,7 +61,7 @@ export const createTask = (event) => {
       monthName,
       year,
     };
-    
+
     taskList.push(taskObject);
     localStorage.setItem("task", JSON.stringify(taskList));
   }
