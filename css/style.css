@@ -503,9 +503,21 @@ hr {
   margin: 0 10px;
   font-size: 14px;
   font-weight: 600;
-  color: rgba(var(--main-color), 0.9);
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter__list li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: rgba(var(--main-color), 1);
+  transition: width 0.3s;
+}
+
+.filter__list li:hover::after {
+  width: 100%;
 }
 
 .btn__detelete-selected.active {
