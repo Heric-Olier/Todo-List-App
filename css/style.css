@@ -530,7 +530,7 @@ hr {
 }
 
 .filter__list li {
-  margin: 0 24px;
+  margin: 0 20px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -550,6 +550,10 @@ hr {
   width: 100%;
 }
 
+.filter__list li.active {
+  color: rgba(var(--main-color), 1);
+}
+
 .filter__list li.active::after {
   width: 100%;
 }
@@ -562,7 +566,7 @@ hr {
   color: rgb(var(--main-color), 1);
   width: 22px;
   transform: scale(0);
-  margin-left: 12px;
+  margin-left: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
