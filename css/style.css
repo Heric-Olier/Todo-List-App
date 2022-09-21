@@ -18,7 +18,7 @@
   padding: 90px 18px;
   background-image: linear-gradient(
     0deg,
-    rgba(var(--main-color), 0.6),
+    rgba(var(--main-color), 0.85),
     rgba(var(--main-color), 1)
   );
   background-size: cover;
@@ -225,7 +225,7 @@ hr {
   height: 46px;
   background-image: linear-gradient(
     0deg,
-    rgba(var(--main-color), 0.6),
+    rgba(var(--main-color), 0.85),
     rgba(var(--main-color), 1)
   );
   border: none;
@@ -530,7 +530,7 @@ hr {
 }
 
 .filter__list li {
-  margin: 0 20px;
+  margin: 0 14px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -566,7 +566,7 @@ hr {
   color: rgb(var(--main-color), 1);
   width: 22px;
   transform: scale(0);
-  margin-left: 20px;
+  margin-left: 14px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
