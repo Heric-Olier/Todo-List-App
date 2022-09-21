@@ -555,6 +555,18 @@ hr {
 }
 
 .btn__detelete-selected.active {
+  transform: scale(1);
+}
+
+.btn__detelete-selected {
+  color: rgb(var(--main-color), 1);
+  width: 22px;
+  transform: scale(0);
+  margin-left: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* .btn__detelete-selected.active {
   display: block;
   transform: scale(1);
 }
@@ -576,7 +588,7 @@ hr {
 
 .btn__detelete-selected:hover {
   background-color: rgba(var(--main-color), 0.8);
-}
+} */
 
 .deleteSpace {
   position: relative;
