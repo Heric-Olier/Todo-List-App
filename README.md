@@ -15,7 +15,7 @@ Link del proyecto abajo 👇
 Este proyecto todo list lo realice para poner en practica mis conocimientos con el uso de LocalStorage para la persistencia de datos, tanto de las tareas como el dark mode y la seleccion de color de la app.
 
 
- funcionalidades:
+ **funcionalidades:**
 
 - [x] Dark Mode
 - [x] Seleccion de color de la app
