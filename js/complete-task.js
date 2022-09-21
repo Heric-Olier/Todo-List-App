@@ -8,13 +8,6 @@ const completeTask = (event, id) => {
   task[taskCompletedIndex].complete = !task[taskCompletedIndex].complete;
   localStorage.setItem("task", JSON.stringify(task));
 
-  
-
-  
-
-
-
-
   if (task[taskCompletedIndex].complete) {
     element.classList.remove("fa-regular");
     element.classList.add("fa-solid");

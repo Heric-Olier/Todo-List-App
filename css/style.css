@@ -520,10 +520,15 @@ hr {
   width: 100%;
 }
 
+.filter__list li.active::after {
+  width: 100%;
+}
+
 .btn__detelete-selected.active {
   display: block;
   transform: scale(1);
 }
+
 
 .btn__detelete-selected {
   transform: scale(0);

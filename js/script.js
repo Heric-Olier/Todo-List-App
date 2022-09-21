@@ -69,4 +69,3 @@ export const createTask = (event) => {
   validateCompletedTask();
 };
 btnCreate.addEventListener("click", createTask);
-showTask();
