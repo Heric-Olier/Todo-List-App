@@ -35,7 +35,8 @@ body.dark .icon {
 }
 
 body.dark .date,
-body.dark .task-number__text {
+body.dark .task-number__text,
+body.dark .footer__content-copyright p {
   color: var(--dark-color-grey);
 }
 
