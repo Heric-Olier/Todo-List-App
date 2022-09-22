@@ -23,6 +23,7 @@ Este proyecto todo list lo realice para poner en practica mis conocimientos con 
 - [x] Responsive Design
 - [x] Eliminar todas las tareas completadas
 - [x] Filtrar tareas completadas y pendientes.
+- [x] Contador dinámico de tareas totales y completadas.
 
 ---
 
