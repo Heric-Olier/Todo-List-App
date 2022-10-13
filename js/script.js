@@ -10,6 +10,7 @@ import { alert } from "./alerts.js";
 
 const btnCreate = document.querySelector("[data-form-btn]");
 
+
 // creamos la fecha
 const date = new Date();
 const day = date.getDate();
